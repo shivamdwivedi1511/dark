@@ -3,7 +3,7 @@ import { formatDate } from "../../utils/helper";
 
 export const NewsCard = ({ data }) => {
   return (
-    <div className="flex w-[900px] shadow-xl shadow-slate-900 m-3 hover:shadow-slate-800">
+    <div className="flex w-[900px] shadow-xl shadow-slate-900 m-3 hover:shadow-slate-800" >
       <img
         className="max-h-[200px] min-w-[350px] p-2 m-2"
         alt="news tile"

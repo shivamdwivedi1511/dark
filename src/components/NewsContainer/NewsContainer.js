@@ -1,22 +1,17 @@
-import React from 'react'
-import WeatherWidget from '../WeatherComponent/WeatherWidget'
-import { NewsCard } from './NewsCard'
-import { useSelector } from 'react-redux'
+import React from "react";
+import WeatherWidget from "../WeatherComponent/WeatherWidget";
+import { NewsCard } from "./NewsCard";
 
-const NewsContainer = () => {
-    const news = useSelector(store=>store.topNews.news);
-
-    const newsHandler =()=>{
-        return news.map(item=><NewsCard data={item}/>)
-    }
+const NewsContainer = ({ news }) => {
+  const newsHandler = () => {
+    return news.map((item, index) => <NewsCard key={index} data={item} />);
+  };
   return (
-    <div className='flex'>
-        <div>
-           {newsHandler()}
-        </div>
-        <WeatherWidget />
+    <div className="flex">
+      <div>{newsHandler()}</div>
+      {/* <WeatherWidget /> */}
     </div>
-  )
-}
+  );
+};
 
-export default NewsContainer
+export default NewsContainer;

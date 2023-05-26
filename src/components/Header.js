@@ -6,6 +6,7 @@ import twitter from '../utils/twitter.png';
 
 const Header = () => {
   return (
+    <div className="sticky top-0 z-10">
     <div className="flex justify-between items-center m-auto w-[90%]">
       <div className="p-3 m-3">
         <p className="text-2xl font-bold bg-gradient-to-r bg-clip-text text-transparent from-gray-200 via-gray-400 to-gray-600 animate-text">Dark</p>
@@ -29,6 +30,7 @@ const Header = () => {
           <img className="h-10 w-10 m-5 p-1" alt='fb' src={twitter} />
           </div>
       </div>
+    </div>
     </div>
   );
 };
